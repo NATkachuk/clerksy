@@ -1,0 +1,33 @@
+@use '../../../Scss/mixins';
+@use '../../../Scss/vars';
+@use '../../../Scss/reset';
+
+
+.section7{
+    @include mixins.Flex(row, center, center, 0);
+    padding: 115px 130px;
+    background-color: vars.$main-color;
+    &-container{
+        @include mixins.Flex(column, center, flex-start, 23px);
+        .section7-textbox{
+            @include mixins.Flex(column, center, flex-start, 27px);
+            &__title{
+                @include mixins.Noto(48px,500,54px);
+                color: vars.$first-color;
+                width: 58%;
+            }    
+            &__text{
+                @include mixins.Noto(18px,400,27px);
+                color: vars.$first-color;
+            }
+        }
+        &__btn{
+            @include mixins.Noto(16px,400,22px);
+            color: vars.$main-color; 
+            padding: 15px 25px;
+            border-radius: 160px;
+            background-color: vars.$second-color;
+        }
+    }
+
+}
