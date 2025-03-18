@@ -3,8 +3,8 @@
 @use '../../../Scss/reset';
 
 .section5{
-    @include mixins.Flex(column, center, center, 0);
-    padding: 180px 130px;
+    @include mixins.Flex(column, center, center, 114px);
+    padding: 180px 35px;
     background-color: vars.$main-color;
     &-container1{
         @include mixins.Flex(row, center, center, 40px);
@@ -25,6 +25,41 @@
        }
        &-img{
         width: 60%;
+        }
     }
+    &-container2{
+        @include mixins.Flex(column, center, center, 40px);
+        .section5-textbox{
+            @include mixins.Flex(column,center,center,26px);
+            &__text1{
+                @include mixins.Noto(48px,500,54px);
+                color: vars.$first-color;   
+            }
+            &__text2{
+                @include mixins.Noto(18px,400,27px);
+                color: vars.$first-color;
+            }
+       }
+       .section5-cont{
+        @include mixins.Flex(row, center, center, 40px);
+        .section5-box{
+            @include mixins.Flex(column, center, flex-start, 25px);
+            box-shadow: 5px 5px 20px 0px rgb(233, 228, 213);
+            padding: 50px 64px 66px 40px;
+            &__text{
+                @include mixins.Noto(28px,500,31px);
+                color: vars.$first-color;
+                width: 76%;
+                }
+                &__list{
+                    @include mixins.Flex(column, center, flex-start, 15px);
+                    &-item{
+                        @include mixins.Noto(16px,400,22px);
+                        color: vars.$first-color;
+                    }
+                }
+
+            }
+        }
     }
 }
