@@ -1,0 +1,27 @@
+@use '../../Scss/mixins';
+@use '../../Scss/vars';
+@use '../../Scss/reset';
+
+.sign-up {
+    @include mixins.Flex(column, center, center, 20px);
+    margin-top: 100px;
+    &__name {
+        border: 2px solid vars.$first-color;
+    }
+    &__email {
+        border: 2px solid vars.$first-color;
+    }
+    &__password {
+        border: 2px solid vars.$first-color;
+    }
+    &__confirm-password {
+        border: 2px solid vars.$first-color;
+    }
+    &__btn {
+        background-color: vars.$third-color;
+        padding: 10px 20px;
+    }
+    &__error {
+        color: vars.$error-color;
+    }
+}

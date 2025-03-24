@@ -1,16 +1,22 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.scss'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
-import Main from './components/Main/Main'
+import SignUp from './pages/SignUp/SignUp'
+import SignIn from './pages/SignIn/SignIn'
+import Layout from './pages/layout/Layout'
+
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <BrowserRouter basename='/clerksy/'>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="SignUp" element={<SignUp />} />
+          <Route path="SignIn" element={<SignIn />} />
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }
